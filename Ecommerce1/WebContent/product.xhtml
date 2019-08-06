@@ -1,0 +1,64 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+ <h:head>
+ <style>
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+</style>
+ </h:head>
+ 
+ <h:body>
+ <h:dataTable value="#{productcontrol.getProductList()}" var="c">
+ 
+ <div class="gallery">
+  <img src="Images/ps1.jpg" alt="PS1" width="600" height="400"/>
+  <div class="desc">Price</div>
+  <h:outputText value="#{c.price}"/>
+  <div class="desc">Add a description of the image here</div>
+ </div>
+
+ <div class="gallery">
+  <img src="Images\ps2.jpg" alt="PS2" width="600" height="400"/>
+  <div class="desc">Add a description of the image here</div>
+ </div>
+
+ <div class="gallery">
+  <img src="Images\ps3.jpg" alt="PS3" width="600" height="400"/>
+  <div class="desc">Add a description of the image here</div>
+ </div>
+
+ <div class="gallery">
+    <img src="Images\ps4.jpg" alt="PS4" width="600" height="400"/>
+  <div class="desc">Add a description of the image here</div>
+ </div>
+ 
+ <div class="gallery">
+    <img src="Images\ps5.jpg" alt="PS5" width="600" height="400"/>
+  <div class="desc">Add a description of the image here</div>
+ </div>
+
+</h:dataTable>
+ </h:body>
+ </html>

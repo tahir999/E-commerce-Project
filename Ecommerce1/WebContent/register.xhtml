@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+            
+     <h:head></h:head> 
+    <h:body>
+<h1>Register</h1>
+	<h:form>
+		<table>
+			<tr>
+				<td><h:outputLabel value="Title" /></td>
+				<td><h:inputText value="#{controller.cust.title}" /></td>
+			</tr>
+			<tr>
+				<td><h:outputLabel value="First Name" /></td>
+				<td><h:inputText value="#{controller.cust.fName}" /></td>
+			</tr>
+			<tr>
+				<td><h:outputLabel value="Last Name" /></td>
+				<td><h:inputText value="#{controller.cust.lName}" /></td>
+			</tr>
+			<tr>
+				<td><h:outputLabel value="Password" /></td>
+				<td><h:inputText value="#{controller.cust.pass}" /></td>
+			</tr>
+			<tr>
+				<td><h:outputLabel value="Phone" /></td>
+				<td><h:inputText value="#{controller.cust.phone}" /></td>
+			</tr>
+			<tr>
+				<td><h:outputLabel value="Home Address" /></td>
+				<td><h:inputText value="#{controller.cust.homeAdress}" /></td>
+			</tr>
+			<tr>
+				<td><h:outputLabel value="Email" /></td>
+				<td><h:inputText value="#{controller.cust.userEmail}" /></td>
+			</tr>
+			<tr>
+				<td><h:commandButton
+						action="#{controller.saveCustomer(controller.cust)}"
+						value="Register" /></td>
+			</tr>
+			<tr>
+				<td><h:outputLabel value="Already have an account?" /></td>
+				<td><h:button value="Login" outcome="second" /></td>
+			</tr>
+		</table>
+	</h:form>
+</h:body>
+</html>
